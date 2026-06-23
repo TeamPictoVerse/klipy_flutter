@@ -14,7 +14,7 @@ class KlipyViewEmojis extends StatelessWidget {
     this.gifsPerRow,
     this.style = const KlipyTabViewStyle(),
     super.key,
-    this.media = const [KlipyMediaFormat.mediumgif, KlipyMediaFormat.tinyGifTransparent],
+    this.media = const [KlipyMediaFormat.mediumGif, KlipyMediaFormat.tinyGifTransparent],
   });
 
   @override
