@@ -12,7 +12,7 @@ class KlipyViewStickers extends StatelessWidget {
     required this.client,
     this.gifsPerRow,
     this.style = const KlipyTabViewStyle(),
-      this.media = const [KlipyMediaFormat.mediumgif, KlipyMediaFormat.tinyGifTransparent],
+      this.media = const [KlipyMediaFormat.mediumGif, KlipyMediaFormat.tinyGifTransparent],
     super.key,
   });
 
