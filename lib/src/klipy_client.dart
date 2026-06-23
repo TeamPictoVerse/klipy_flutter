@@ -69,6 +69,7 @@ class KlipyClient extends klipy_dart.KlipyClient {
     double maxExtent = 1,
     double minExtent = 0.7,
     String queryText = '',
+    List<KlipyMediaFormat>? media = [KlipyMediaFormat.mediumgif, KlipyMediaFormat.tinyGifTransparent];
     TextEditingController? searchFieldController,
     String searchFieldHintText = 'Search KLIPY',
     Widget? searchFieldWidget,
@@ -84,7 +85,7 @@ class KlipyClient extends klipy_dart.KlipyClient {
         [
           KlipyTab(
             name: 'Emojis',
-            view: KlipyViewEmojis(client: this, style: style.tabViewStyle),
+            view: KlipyViewEmojis(client: this, style: style.tabViewStyle, media: media),
           ),
           KlipyTab(
             name: 'GIFs',
@@ -92,7 +93,7 @@ class KlipyClient extends klipy_dart.KlipyClient {
           ),
           KlipyTab(
             name: 'Stickers',
-            view: KlipyViewStickers(client: this, style: style.tabViewStyle),
+            view: KlipyViewStickers(client: this, style: style.tabViewStyle, media: media),
           ),
         ];
 
