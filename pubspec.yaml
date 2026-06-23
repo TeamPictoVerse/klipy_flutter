@@ -20,8 +20,8 @@ dependencies:
   extended_image: ^10.0.1
   klipy_dart:
   git:
-    url: https://github.com/TeamPictoVerse/klipy_dart
-    ref:  6a1d9228e28ce87e11e809a875052dfcc4438830
+    url: https://github.com/TeamPictoVerse/klipy_dart.git
+    ref:  148f0d85b7682801b8313670697eefe575a42f64
 
  
 
