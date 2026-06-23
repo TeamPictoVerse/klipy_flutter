@@ -6,13 +6,12 @@ class KlipyViewStickers extends StatelessWidget {
   final KlipyClient client;
   final int? gifsPerRow;
   final KlipyTabViewStyle style;
-  final List<KlipyMediaFormat>? media;
 
   const KlipyViewStickers({
     required this.client,
     this.gifsPerRow,
     this.style = const KlipyTabViewStyle(),
-      this.media = const [KlipyMediaFormat.mediumGif, KlipyMediaFormat.tinyGifTransparent],
+  
     super.key,
   });
 
@@ -26,14 +25,14 @@ class KlipyViewStickers extends StatelessWidget {
         if (queryText.isNotEmpty) {
           return await client.search(
             queryText,
-            mediaFilter: media,
+            mediaFilter: const [KlipyMediaFormat.mediumGif, KlipyMediaFormat.tinyGifTransparent],
             pos: pos,
             limit: limit,
             sticker: true,
           );
         } else {
           return await client.featured(
-            mediaFilter: media,
+            mediaFilter: const [KlipyMediaFormat.mediumGif, KlipyMediaFormat.tinyGifTransparent],
             pos: pos,
             limit: limit,
             sticker: true,
