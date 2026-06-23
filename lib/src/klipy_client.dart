@@ -69,7 +69,7 @@ class KlipyClient extends klipy_dart.KlipyClient {
     double maxExtent = 1,
     double minExtent = 0.7,
     String queryText = '',
-    List<KlipyMediaFormat>? media = [KlipyMediaFormat.mediumgif, KlipyMediaFormat.tinyGifTransparent];
+    List<KlipyMediaFormat>? media = [KlipyMediaFormat.mediumgif, KlipyMediaFormat.tinyGifTransparent],
     TextEditingController? searchFieldController,
     String searchFieldHintText = 'Search KLIPY',
     Widget? searchFieldWidget,
