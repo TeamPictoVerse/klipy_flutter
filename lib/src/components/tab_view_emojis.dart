@@ -6,12 +6,14 @@ class KlipyViewEmojis extends StatelessWidget {
   final KlipyClient client;
   final int? gifsPerRow;
   final KlipyTabViewStyle style;
+  final KlipyMediaFormat media;
 
   const KlipyViewEmojis({
     required this.client,
     this.gifsPerRow,
     this.style = const KlipyTabViewStyle(),
     super.key,
+    this.media,
   });
 
   @override
@@ -24,7 +26,7 @@ class KlipyViewEmojis extends StatelessWidget {
         if (queryText.isNotEmpty) {
           return await client.search(
             '$queryText emoji',
-            mediaFilter: const [KlipyMediaFormat.tinyGifTransparent],
+            mediaFilter: [media],
             pos: pos,
             limit: limit,
             sticker: true,
@@ -32,7 +34,7 @@ class KlipyViewEmojis extends StatelessWidget {
         } else {
           return await client.search(
             'emoji',
-            mediaFilter: const [KlipyMediaFormat.tinyGifTransparent],
+            mediaFilter: [media],
             pos: pos,
             limit: limit,
             sticker: true,
